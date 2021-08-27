@@ -1,4 +1,3 @@
-// local quotes data
 const quotes = [
   {
     id: 1,
@@ -22,7 +21,6 @@ const quotes = [
     },
 ];
 
-// select items
 const author = document.getElementById("author");
 const quote = document.getElementById("quote");
 
@@ -30,22 +28,18 @@ const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 const randomBtn = document.querySelector(".random-btn");
 
-// set starting item
 let currentItem = 0;
 
-// load initial item
 window.addEventListener("DOMContentLoaded", function () {
   showQuote();
 });
 
-// show quote based on item
 function showQuote() {
   const item = quotes[currentItem];
   author.textContent = item.author;
   quote.textContent = item.quote;
 }
 
-// show next quote
 nextBtn.addEventListener("click", function () {
     currentItem++;
     if(currentItem > quotes.length - 1) {
@@ -54,7 +48,6 @@ nextBtn.addEventListener("click", function () {
   showQuote(currentItem);
 });
 
-// show previous quote
 prevBtn.addEventListener("click", function () {
   currentItem--;
   if(currentItem < 0) {
@@ -63,7 +56,6 @@ prevBtn.addEventListener("click", function () {
   showQuote(currentItem);
 });
 
-// show a quote randomly
 randomBtn.addEventListener("click", function () {
   currentItem = Math.floor(Math.random() * quotes.length);
   showQuote();
