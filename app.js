@@ -3,7 +3,7 @@ const quotes = [
   {
     id: 1,
     author: "Albert Einstein",
-    quote: "“It is not that I'm so smart. But I stay with the questions much longer.",
+    quote: "It is not that I'm so smart. But I stay with the questions much longer.",
   },
   {
     id: 2,
